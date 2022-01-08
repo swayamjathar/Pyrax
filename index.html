@@ -15,9 +15,11 @@
     <style>
         /* body {
   height: 3000px; /* Used to enable scrolling */
-  /* background:linear-gradient(#b5d6e2, #ffffff 45.38%, #5cffff); */
-/* }  */
-
+        /* background:linear-gradient(#b5d6e2, #ffffff 45.38%, #5cffff); */
+        /* }  */
+        .navbar navbar-expand-lg navbar-light bg-light{
+            
+        }
         .alert {
             padding: 20px;
             background-color: rgba(240, 2, 61, 0.93);
@@ -29,18 +31,27 @@
         /* The close button */
         .closebtn {
             margin-left: 15px;
-            color: white;
+            color: rgb(245, 249, 250);
             font-weight: bold;
             float: right;
-            font-size: 22px;
-            line-height: 20px;
+            font-size: 20px;
+            line-height: 25px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.6s;
         }
 
         /* When moving the mouse over the close button */
         .closebtn:hover {
             color: black;
+        }
+
+        #caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(250, 255, 255);
+        }
+
+        marquee{
+            font-size: 2em;
         }
     </style>
 </head>
@@ -57,19 +68,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">CCTV Footage</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a class="nav-link" href="#alert3">
-                            contact
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Temperature Control
                         </a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <img src="favicon_io/apple-touch-icon.png" alt="" style="height: 50px;">
+                    <a href="#">
+                        <img src="favicon_io/apple-touch-icon.png" alt="" style="height: 50px;">
+                    </a>
 
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button> -->
@@ -79,50 +97,67 @@
     </nav>
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        Danger! Evacuate the area immedietely.
+        <marquee width="100%" direction="left" height="54px">
+            <b> Danger! Evacuate the area immedietely.</b>
+        </marquee>
     </div>
     <div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="engineering-working-desk-safty-helmet-260nw-571736968.jpg.webp" style="height:700px;width:300px" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
+                <div class="carousel-item active">
+                    <img src="images/1.jpg" style="height:700px;width:300px" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="caption">
+                        <h5>safety precautions:look for nearest exit</h5>
+                        <p>In case of fire alarm evaciating the building is the safest yet dangerous way to save
+                            life. Extreme care must be taken while following the safety measures.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images-2.jpeg" class="d-block w-100" style="height:700px;width:300px "alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                <div class="carousel-item">
+                    <img src="images/2.jpg" class="d-block w-100" style="height:700px;width:300px" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="caption">
+                        <h5></h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images.jpeg" class="d-block w-100" style="height:700px;width:300px" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
+                <div class="carousel-item">
+                    <img src="images/3.jpg" class="d-block w-100" style="height:700px;width:300px" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="caption">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
                 </div>
-              </div>
+                <div class="carousel-item">
+                    <img src="images/4.jpg" class="d-block w-100" style="height:700px;width:300px" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="caption">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the forth slide.</p>
+                    </div>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
             <p>
-          </div>
+        </div>
     </div>
-    <div class="contact">
+    <!-- <div class="contact">
         <img src="favicon_io-3/android-chrome-512x512.png" style ="height:20px; width:20px">
         Fire station:
         <br>
@@ -135,7 +170,7 @@
         <img src="favicon_io-5/android-chrome-512x512.png" style ="height:20px; width:20px">
         Head Quaters:
         <br>        
-    </div>
+    </div> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
